@@ -1,97 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>C&amp;K Landscaping</title>
+  <style>
+    /* Reset and basic styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      background: #f4f4f4;
+      padding: 15px 20px;
+      text-align: right;
+    }
+    nav ul { list-style: none; display: flex; justify-content: flex-end; gap: 20px; }
+    nav a { font-weight: bold; }
+
+    /* Logo Container */
+    .logo-container {
+      padding: 15px 20px;
+    }
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
+      display: block;
+    }
+
+    /* Hero Image */
+    .hero img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #000;
+    }
+
+    /* Sections */
+    section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+    section h2 { text-align: center; margin-bottom: 20px; }
+
+    /* Services Flex */
+    .services .grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .service {
+      flex: 1;
+      min-width: 200px;
+      max-width: 220px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+      text-align: center;
+    }
+    .service ul {
+      list-style-type: disc;
+      margin: 10px 0 15px 20px;
+      text-align: left;
+    }
+    .services .note {
+      text-align: center;
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+    .services .schedule-note {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Contact */
+    .contact a { color: #68a246; font-weight: bold; }
+
+    /* Footer */
+    footer { background: #222; color: #fff; text-align: center; padding: 10px 0; font-size: 0.9rem; }
+  </style>
 </head>
-<body class="antialiased text-gray-800">
-  <!-- Header with absolute logo on left, nav centered on mobile, right-aligned on desktop -->
-  <header class="bg-gray-100 py-4 relative">
-    <img src="CK Mowing-11.png" alt="C&amp;K Landscaping Logo" class="absolute left-4 top-1/2 transform -translate-y-1/2 h-10" />
-    <nav class="container mx-auto flex justify-center md:justify-end space-x-6">
-      <a href="#services" class="font-semibold hover:text-green-600">Services</a>
-      <a href="#contact" class="font-semibold hover:text-green-600">Contact</a>
-      <a href="#about" class="font-semibold hover:text-green-600">About</a>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Image (original) -->
-  <section class="w-full">
-    <img src="images.jpeg" alt="Someone mowing lawn" class="w-full h-72 object-cover border border-black" />
+  <div class="logo-container">
+    <img src="CK Mowing-11.png" alt="C&amp;K Landscaping Logo">
+  </div>
+
+  <section class="hero">
+    <img src="images.jpeg" alt="Someone mowing lawn">
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="container mx-auto py-8">
-    <h2 class="text-2xl text-center mb-6">Our Services</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- 0.25 Acre Card -->
-      <div class="bg-white border border-gray-200 p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">0.25 Acre Lawn</h3>
-        <ul class="list-disc list-inside mb-2">
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="service">
+        <h3>0.25 Acre Lawn</h3>
+        <ul>
           <li>Mowing</li>
           <li>Weedwacking</li>
           <li>Edging &amp; Trimming</li>
         </ul>
-        <p class="font-bold mb-2">$50</p>
-        <p class="italic text-gray-600">Most residential houses have this 0.25 acre yard.</p>
+        <p><strong>Price: $40</strong></p>
       </div>
-      <!-- 0.50 Acre Card -->
-      <div class="bg-white border border-gray-200 p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">0.50 Acre Lawn</h3>
-        <ul class="list-disc list-inside mb-2">
+      <div class="service">
+        <h3>0.50 Acre Lawn</h3>
+        <ul>
           <li>Mowing</li>
           <li>Weedwacking</li>
           <li>Edging &amp; Trimming</li>
         </ul>
-        <p class="font-bold">$70</p>
+        <p><strong>Price: $60</strong></p>
       </div>
-      <!-- 0.75 Acre Card -->
-      <div class="bg-white border border-gray-200 p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">0.75 Acre Lawn</h3>
-        <ul class="list-disc list-inside mb-2">
+      <div class="service">
+        <h3>0.75 Acre Lawn</h3>
+        <ul>
           <li>Mowing</li>
           <li>Weedwacking</li>
           <li>Edging &amp; Trimming</li>
         </ul>
-        <p class="font-bold">$90</p>
+        <p><strong>Price: $80</strong></p>
       </div>
-      <!-- 1.00 Acre Card -->
-      <div class="bg-white border border-gray-200 p-4 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">1.00 Acre Lawn</h3>
-        <ul class="list-disc list-inside mb-2">
+      <div class="service">
+        <h3>1.00 Acre Lawn</h3>
+        <ul>
           <li>Mowing</li>
           <li>Weedwacking</li>
           <li>Edging &amp; Trimming</li>
         </ul>
-        <p class="font-bold">$110</p>
+        <p><strong>Price: $100</strong></p>
       </div>
     </div>
-    <p class="text-center text-red-600 mt-4">If a yard is overgrown, there is a $10 fee; after we cut, the rate returns to normal.</p>
-    <p class="italic text-center text-gray-600 mt-6">Lawns over 1.00 acre require a site survey before service.</p>
-    <p class="text-center font-semibold mt-2">To schedule our landscaping services, call, text, or email us using the contacts below.</p>
+    <p class="note">Lawns over 1.00 acre require a site survey before service.</p>
+    <p class="schedule-note">To schedule our landscaping services, call, text, or email us using the contacts below.</p>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-8">
-    <h2 class="text-2xl text-center mb-4">Contact Us</h2>
-    <p class="text-center mb-2">
-      Call us at <a href="tel:9315910877" class="text-green-600 font-semibold">931-591-0877</a>
-      or email <a href="mailto:ckmowingtn@gmail.com" class="text-green-600 font-semibold">ckmowingtn@gmail.com</a>
-    </p>
-    <p class="text-center">We accept <span class="font-semibold">Cash &amp; Cash App</span> payments.</p>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Call us at <a href="tel:9315910877">931-591-0877</a> or email <a href="mailto:info@cklandscaping.com">info@cklandscaping.com</a></p>
+    <p>We accept cash &amp; Cash App payments.</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="container mx-auto py-8">
-    <h2 class="text-2xl text-center mb-4">About C&amp;K</h2>
-    <p class="text-center max-w-2xl mx-auto">We are high school students in Clarksville, Tennessee, dedicated to serving our community through quality landscaping and lawn care.</p>
+  <section id="about" class="about">
+    <h2>About C&amp;K</h2>
+    <p>We are high school students in Clarksville, Tennessee, dedicated to serving our community through quality landscaping and lawn care.</p>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-4">
-    <p class="text-center text-sm">&copy; 2025 C&amp;K Landscaping. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 C&amp;K Landscaping. All rights reserved.</p>
   </footer>
 </body>
 </html>
